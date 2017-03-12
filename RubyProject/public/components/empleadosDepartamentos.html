@@ -1,0 +1,72 @@
+<div class="container" >
+        <h4>Empleados de <strong>{{departamento.name}}</strong></h4>
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="busqueda" placeholder="buscar...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Buscar</button>
+            <button class="btn btn-primary" type="button" ng-controller="modals" ng-click="open('lg', 'empleadoDepartamento', departamento)">Asignar Empleado a {{departamento.name}}</button>
+          </span>
+        </div>
+                <div ng-class="{'col-sm-6':empleadoSaldo || empleadoTitulo, 'col-sm-12': !empleadoSaldo  || !empleadoTitulo}">
+                  <table class="table">
+                  <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Sexo</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Salarios</th>
+                    <th>Titulos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="e in employees | filter: busqueda">
+                      <td>{{e.first_name+" "+e.last_name}}</td>
+                      <td>{{e.gender=='M'?'Hombre':'Mujer'}}</td>
+                      <td>{{e.birth_date | date:'mediumDate'}}</td>
+                      <td  ng-click="setEmpleadoSaldo(e);">Salario</td>
+                      <td  ng-click="setEmpleadoTitulo(e);">Titulos</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              <div class="col-sm-6" ng-if="empleadoSaldo" style="float: right;">
+                <h4>Salarios de <strong>{{empleadoSaldo.first_name+" "+empleadoSaldo.last_name}}</strong></h4>
+                <button class="btn btn-primary" type="button" ng-controller="modals" ng-click="open('lg', 'salario', empleadoSaldo)">Asignar Salario a {{empleadoSaldo.first_name+" "+empleadoSaldo.last_name}}</button>
+                <table class="table">
+                  <thead>
+                    <tr>
+                    <th>Salario</th>
+                    <th>Desde</th>
+                    <th>Hasta</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="s in salaries">
+                      <td>{{s.salary}}</td>
+                      <td>{{s.from_date | date:'mediumDate'}}</td>
+                      <td>{{s.to_date | date:'mediumDate'}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+                <div class="col-sm-6" ng-if="empleadoTitulo" style="float: right;">
+                <h4>Titulos de <strong>{{empleadoTitulo.first_name+" "+empleadoTitulo.last_name}}</strong></h4>
+                <button class="btn btn-primary" type="button" ng-controller="modals" ng-click="open('lg', 'titulo', empleadoTitulo)">Asignar T&iacute;tulo a {{empleadoTitulo.first_name+" "+empleadoTitulo.last_name}}</button>
+                <table class="table">
+                  <thead>
+                    <tr>
+                    <th>Titulos</th>
+                    <th>Desde</th>
+                    <th>Hasta</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="t in titulos">
+                      <td>{{t.title}}</td>
+                      <td>{{t.from_date | date:'mediumDate'}}</td>
+                      <td>{{t.to_date | date:'mediumDate'}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+  </div>

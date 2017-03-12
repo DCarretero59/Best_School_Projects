@@ -1,0 +1,16 @@
+<div class="modal-header">
+	<h3 class="modal-title">Agregar Comentario</h3>
+</div>
+<form>
+	<div class="modal-body">	
+	  	<div class="form-group">
+			<label for="nombre">Usuario</label>
+			<input type="text" class="form-control" id="deptNombreInput" placeholder="usuario" ng-model="comment.user_name">
+			<label for="nombre">Comentario</label>
+			<input type="text" class="form-control" id="deptNombreInput" placeholder="Comentario" ng-model="comment.comment">
+		</div>
+	</div>
+	 <div class="modal-footer">
+		<button class="btn btn-primary" type="button" ng-click="agregarComment(comment)">Agregar Departamento</button>
+	</div>
+</form>

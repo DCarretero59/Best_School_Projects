@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto Empleados</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"/>
+    <script>
+    	angular.module('app',['ui.router'])
+		.controller('empleados', function($scope, $http) {
+			$http.get("departments").then(function(response){
+				$scope.departamentos=response.data;
+			});
+			
+			$scope.setDepartamento = function(dep){
+				$scope.departamento = dep;
+				$http.get("departments/"+dep.id+"/employees").then(function(response){
+					$scope.employees = response.data;
+				});
+			}
+		});
+    </script>
+  </head>
+  <body ng-app="app">
+  	<div class="container" ng-controller="empleados">
+  		<div class="page-header">
+		  <h1>Departamentos <small>y sus empleados</small></h1>
+		</div>
+  	  <div class="row">
+  	  	<div ng-class="{'col-sm-6':departamento, 'col-sm-12': !departamento}">
+  	  	  <div class="col-sm-6" ng-repeat="d in departamentos">
+  	  	  <div class="panel panel-default" ng-class="{'panel-success':departamento==d}" style="cursor:pointer;" ng-click="setDepartamento(d)">
+		    <div class="panel-heading">{{d.dept_name}} ({{d.id}})</div>
+		    <div class="panel-body">
+		      <dl>
+		      	<dt>Manager</dt>
+		      	<dd>{{d.manager.first_name+" "+d.manager.last_name}}</dd>
+		      	<dt>Empleados</dt>
+		      	<dd><span class="badge">{{d.employees_count}}</span></dd>
+		      </dl>
+		    </div>
+		  </div>
+		  </div>
+  	  	</div>
+  		<div class="col-sm-6" ng-if="departamento">
+  			<h4>Empleados de <strong>{{departamento.dept_name}}</strong></h4>
+  			<div class="input-group">
+		      <input type="text" class="form-control" ng-model="busqueda" placeholder="buscar...">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">Buscar</button>
+		      </span>
+		    </div>
+  			<table class="table">
+  				<thead>
+  					<tr>
+  					<th>Nombre</th>
+  					<th>Sexo</th>
+  					<th>Fecha Nacimiento</th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr ng-repeat="e in employees | filter: busqueda">
+  						<td>{{e.first_name+" "+e.last_name}}</td>
+  						<td>{{e.gender=='M'?'Hombre':'Mujer'}}</td>
+  						<td>{{e.birth_date | date:'mediumDate'}}</td>
+  					</tr>
+  				</tbody>
+  			</table>
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>
+

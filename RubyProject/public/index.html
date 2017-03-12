@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto Empleados</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script>
+      var app = angular.module('app',['ngAnimate', 'ui.bootstrap', 'ui.router']);
+      app.controller('getData', function($scope, $http) {
+        $http.get("departments").then(function(response){
+          $scope.departamentos=response.data;
+        });
+
+        $http.get("conteoEmpleados").then(function(response){
+          $scope.conteo=response.data;
+        });
+        
+        $scope.setDepartamento = function(dep){
+          $scope.departamento = dep;
+          $scope.empleadoSaldo = undefined;
+          $scope.empleadoTitulo = undefined;
+          $http.get("departments/"+dep.id+"/employees").then(function(response){
+            $scope.employees = response.data;
+          });
+        }
+        $scope.getEmpleados = function(page){
+          $scope.departamento = undefined;
+          $scope.empleadoSaldo = undefined;
+          $scope.empleadoTitulo = undefined;
+          $scope.page = page;
+          $http.get("employees/" +page).then(function(response){
+            $scope.employees=response.data;
+          });
+        }
+
+        $scope.setEmpleadoSaldo = function(emp){
+          $scope.empleadoSaldo = emp;
+          $http.get("employees/"+emp.id+"/salaries").then(function(response){
+            $scope.salaries = response.data;
+          });
+        }
+
+        $scope.setEmpleadoTitulo = function(emp){
+          $scope.empleadoTitulo= emp;
+          $http.get("employees/"+emp.id+"/titles").then(function(response){
+            $scope.titulos = response.data;
+          });
+        }
+      });
+      app.config(function($stateProvider, $urlRouterProvider) {
+
+          $urlRouterProvider.otherwise("/departamentos");
+
+          $stateProvider
+            .state('departamentos', {
+              url: "/departamentos",
+              templateUrl: "/components/departamentos.html"
+            })
+            .state('empleados', {
+              url: "/empleados",
+              templateUrl: "/components/empleados.html"
+            }).state('empleadosDepartamentos', {
+              url: "/empleadosDepartamentos",
+              templateUrl: "/components/empleadosDepartamentos.html"
+            });
+      });
+      app.controller('modals', function ($scope, $uibModal, $log) {
+        $scope.animationsEnabled = true;
+
+        $scope.open = function (size, ventana, variable) {
+
+          if (ventana=="dep") {
+            variable = null;
+            var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: '/modals/agregarDepartamento.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+              tipo: function () {
+                return ventana;
+              },
+              variable: function(){
+                return variable;
+              }
+            }
+          });
+          }else if (ventana=="empleado"){
+            variable = null;
+            var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: '/modals/agregarEmpleado.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+              tipo: function () {
+                return ventana;
+              },
+              variable: function(){
+                return variable;
+              }
+            }
+          });
+          }else if (ventana=="empleadoDepartamento"){
+
+            var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: '/modals/agregarEmpleadoDepartamento.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+              tipo: function () {
+                return ventana;
+              },
+              variable: function(){
+                return variable;
+              }
+            }
+          });
+          }else if (ventana=="managerDepartamento"){
+
+            var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: '/modals/agregarManagerDepartamento.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+              tipo: function () {
+                return ventana;
+              },
+              variable: function(){
+                return variable;
+              }
+            }
+          });
+          }else if (ventana=="salario"){
+
+            var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: '/modals/agregarSalario.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+              tipo: function () {
+                return ventana;
+              },
+              variable: function(){
+                return variable;
+              }
+            }
+          });
+          }else if (ventana=="titulo"){
+
+            var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: '/modals/agregarTitulo.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+              tipo: function () {
+                return ventana;
+              },
+              variable: function(){
+                return variable;
+              }
+            }
+          });
+          };
+          
+
+        };
+
+        $scope.toggleAnimation = function () {
+          $scope.animationsEnabled = !$scope.animationsEnabled;
+        };
+
+      });
+      app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, tipo, $http, variable) {
+         $scope.variable = variable;
+        $http.get("employees").then(function(response){
+          $scope.empleados=response.data;
+        });
+
+
+        $scope.agregarDepartamento = function (department) {
+          $http.post('/departments', department).then(function(response){
+            $uibModalInstance.close();
+        });
+        };
+
+        $scope.agregarEmpleado = function (employee) {
+          $http.post('/employees', employee).then(function(response){
+            $uibModalInstance.close();
+        });
+        };
+
+        $scope.agregarSalario = function (salary) {
+          $http.post('/employees/'+$scope.variable.id+'/salaries', salary).then(function(response){
+            $uibModalInstance.close();
+        });
+        };
+
+        $scope.agregarTitulo = function (title) {
+          $http.post('/employees/'+$scope.variable.id+'/titles', title).then(function(response){
+            $uibModalInstance.close();
+        });
+        };
+
+        $scope.agregarEmpleadoDepartamento = function (e) {
+          e.tipo = "empleado";
+          $http.post('/departments/'+$scope.variable.id+'/employeeDepartment', e).then(function(response){
+            $uibModalInstance.close();
+        });
+        };
+
+        $scope.agregarManagerDepartamento = function (m) {
+          m.tipo = "manager";
+          $http.post('/departments/'+$scope.variable.id+'/managers', m).then(function(response){
+            $uibModalInstance.close();
+        });
+        };
+
+        $scope.cancel = function () {
+          $uibModalInstance.dismiss('cancel');
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="app">
+    <div ng-controller="getData">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a ui-sref="#">Proyecto Empleados</a>
+                </li>
+                <li>
+                    <a ui-sref="departamentos">Departamentos</a>
+                </li>
+                <li ng-controller="modals">
+                    <a ng-click="open('lg', 'dep')"><small>Agregar Departamento</small></a>
+                </li>
+                <li>
+                    <a ng-click="getEmpleados(1)" ui-sref="empleados">Empleados</a>
+                </li>
+                <li ng-controller="modals">
+                    <a ng-click="open('lg', 'empleado')"><small>Agregar Empleado</small></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="container">
+                          <div class="page-header">
+                          <h1>Departamentos <small>y sus empleados</small></h1>
+                          </div>
+                          <div class="row" ui-view>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

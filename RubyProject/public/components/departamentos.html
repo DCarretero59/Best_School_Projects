@@ -1,0 +1,22 @@
+
+<div class="container">
+  	  	<div ng-class="col-sm-6c col-sm-12">
+  	  	  <div class="col-sm-6" ng-repeat="d in departamentos">
+  	  	  <div class="panel panel-default" style="cursor:pointer;">
+		    <div class="panel-heading" ng-click="setDepartamento(d);" ui-sref="empleadosDepartamentos">{{d.name}} ({{d.id}})</div>
+		    <div class="panel-body">
+		      <dl>
+		      	<dt>Managers: </dt>
+		      	<dd ng-repeat="m in d.managers">{{m.first_name+" "+m.last_name}}</dd>
+            <br>
+		      	<dt>Empleados</dt>
+		      	<dd><span class="badge">{{d.employees_count}}</span></dd>
+            <dd style="float:right;" ng-controller="modals">
+            <button class="btn btn-primary" type="button" ng-click="open('lg', 'managerDepartamento', d)">Asignar Manager a {{d.name}}</button></dd>
+		      </dl>
+		    </div>
+		  </div>
+		  </div>
+  	  	</div>
+      </div>
+
