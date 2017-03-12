@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="Conten/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="Content/default" rel="stylesheet" type="text/css" />
+    <link href="Content/fonts" rel="stylesheet" type="text/css" />
+    <link href="Content/images" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="Content/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="Content/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Principal</title>
+</head>
+<body>
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="#">GameForce</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    
+                    <li class="current_page_item"><a href="#" accesskey="1" title="">Inicio</a></li>
+                    <li>@Html.ActionLink("Catalogo", "Catalogo", "Home")</li>
+                    <li>@Html.ActionLink("Sobre nosotros", "AboutUs", "Home")</li>
+                    <li>@Html.ActionLink("Contactanos", "Contacto", "Home")</li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="page-wrapper">
+        <div id="page" class="container">
+            <h2>Bienvenido a Nuestro Catolog en Linea</h2>
+            <p>Este catalogo nos ayuda a estar mas cerca de ustedes nuestros <strong>Clientes</strong>, Puedes seguirnos en nuestra pagina de facebook  <a href="http://templated.co" rel="nofollow">FACEBOOK</a>. Nos concentraremos unicamente en la venta de videojuegos y accesorios relacionados a esto , a si mismo como los peluches , playeras, llaveros relacionados con el tema 
+        </div>
+    </div>
+    <div id="portfolio" class="container">
+        <div class="box1">
+            <h2>Mas Vendidos </h2>
+            <ul class="style2">
+                <li><a href="#">The Witcher Wild Hunt </a></li>
+                <li><a href="#">Batman Arkham Knight </a></li>
+                <li><a href="#">Shadow of Mordor</a></li>
+                <li><a href="#">Mortal Combat X</a></li>
+            </ul>
+        </div>
+        <div class="box2">
+            <h2>Descuento en nuestra Edicion Especial</h2>
+            <p>Aprovecha esta promocion para llevarte The Witcher 3 en edicion especial.</p>
+            <img src="Content\images\witcher.jpg">
+
+           
+            
+        </div>
+        <div class="box3">
+            <h2>Preventa de Batman Arkham Knight</h2>
+            <p>¿Quieres ser de los primeros en poseer el juego?,no esperes mas</p>
+            <img src="Content\images\Arkham.jpg" width="205" height="253">
+        </div>
+        <div class="box4">
+            <h2>Conoce nuestros pops</h2>
+            <p>Conoce nuestros pops ! (Figuras coleccionables de tus personajes favoritos) para verdaderos fans </p>
+            <img src="Content\images\pop.jpg" width="205" height="253">
+        </div>
+    </div>
+    <div id="footer" class="container">
+        <div class="boxA">
+            <div class="box">
+                <img src="images/img01.jpg" width="320" height="180" alt="" />
+                <h3>Encargos</h3>
+                <p>¿Deseas un juegos en especifico?, algun accesorio que no encuentras en el mercado, ven y contactanos</p>
+           
+            </div>
+            <div class="box">
+                <img src="images/img03.jpg" width="320" height="180" alt="" />
+                <h3>¿Quieres conocer nuestras Promosiones?</h3>
+                <p>No te basta con todo lo que tienes, ven y consigue nuestras ofertas.</p>
+               
+            </div>
+        </div>
+        <div class="boxB">
+            <div class="box">
+                <img src="images/img03.jpg" width="320" height="180" alt="" />
+                <h3>Nuestras Mochilas para Gamers</h3>
+                <p>¿ Eres Gamer ?, seguro te encantara llevar una mochila a tu estilo</p>
+                <img src="Content\images\mochila.jpg" width="205" height="253">
+            </div>
+            <div class="box">
+                <img src="images/img04.jpg" width="320" height="180" alt="" />
+                <h3>Accesorios para tu consola</h3>
+                <p>¿No te basta solo con tu control?, ven y complementa lo que te falta .</p>
+                <img src="Content\images\accesorio.jpg" width="205" height="253">
+            </div>
+        </div>
+        <div class="boxC">
+            <div class="box">
+                <img src="images/img01.jpg" width="320" height="180" alt="" />
+                <h3>Peluches para Gamers</h3>
+                <p>Para aquellos que llevan su pasion a todos lados, tenemos para ti nuestra gama de peluches</p>
+                <img src="Content\images\peluche.jpg" width="205" height="253">
+            </div>
+            <div class="box">
+                <img src="images/img03.jpg" width="320" height="180" alt="" />
+                <h3>Accesorios para Celular</h3>
+                <p> ¿Quieres tener tus cosas completamente perzonalisadas?,, compra tus accesorios electronicos</p>
+                <img src="Content\images\celular.jpg" width="205" height="253">
+            </div>
+        </div>
+    </div>
+    <div id="copyright" class="container">
+        <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">GameForce</a>.</p>
+    </div>
+</body>
+</html>

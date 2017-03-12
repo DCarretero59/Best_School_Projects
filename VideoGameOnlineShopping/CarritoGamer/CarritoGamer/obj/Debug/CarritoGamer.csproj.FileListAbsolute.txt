@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\CarritoGamer.dll.config
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\CarritoGamer.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\CarritoGamer.pdb
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Microsoft.Web.Infrastructure.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Newtonsoft.Json.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Helpers.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Mvc.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Razor.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Deployment.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Razor.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Newtonsoft.Json.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Helpers.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Mvc.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Razor.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Deployment.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Razor.xml
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\obj\Debug\CarritoGamer.csprojResolveAssemblyReference.cache
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\obj\Debug\CarritoGamer.dll
+D:\Users\Diego C\Google Drive\Documentos Escuela\8to Semestre\Programacion Avanzada\GitHub\ProyectoLemus\CarritoGamer\CarritoGamer\obj\Debug\CarritoGamer.pdb
+=======
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\CarritoGamer.dll.config
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\CarritoGamer.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\CarritoGamer.pdb
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Newtonsoft.Json.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Net.Http.Formatting.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Helpers.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Http.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Http.WebHost.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Mvc.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Razor.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Razor.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\Newtonsoft.Json.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Net.Http.Formatting.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Helpers.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Http.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Http.WebHost.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Mvc.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.Razor.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\bin\System.Web.WebPages.Razor.xml
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\obj\Debug\CarritoGamer.csprojResolveAssemblyReference.cache
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\obj\Debug\CarritoGamer.dll
+C:\Users\Pamela Ramirez\Documents\ProyectoLemusMVC\ProyectoLemus\CarritoGamer\CarritoGamer\obj\Debug\CarritoGamer.pdb
+>>>>>>> origin/master
